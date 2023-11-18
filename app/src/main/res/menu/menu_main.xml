@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/baseline_home_24"
+        android:background="@color/white"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/menu_shope"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        android:title="Shope"
+        />
+
+    <item
+        android:id="@+id/menu_tanaman"
+        android:icon="@drawable/plant_icon"
+        android:title="Tanaman"
+        />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile"
+        />
+</menu>
