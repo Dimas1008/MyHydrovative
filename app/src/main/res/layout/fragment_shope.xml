@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="Cari Bahan atau Tanaman..?"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
