@@ -3,7 +3,6 @@ package com.example.myhydrovative.ui.activity.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.example.myhydrovative.R
 import com.example.myhydrovative.databinding.ActivityMainBinding
 import com.example.myhydrovative.ui.activity.login.LoginActivity
