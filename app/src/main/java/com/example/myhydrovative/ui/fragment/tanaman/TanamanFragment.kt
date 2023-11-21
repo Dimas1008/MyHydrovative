@@ -42,8 +42,8 @@ class TanamanFragment : Fragment() {
         val adapter = ViewPagerAdapter(childFragmentManager, lifecycle)
 
         // Tambahkan fragments ke adapter
-        adapter.addFragment(TanamFragment(), "Tab 1")
-        adapter.addFragment(PanenFragment(), "Tab 2")
+        adapter.addFragment(TanamFragment(), "Ditanam")
+        adapter.addFragment(PanenFragment(), "Sudah Panen")
 
         // Atur adapter untuk ViewPager2
         viewPager2.adapter = adapter
