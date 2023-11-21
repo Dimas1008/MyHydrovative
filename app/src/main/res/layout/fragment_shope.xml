@@ -68,7 +68,8 @@
             android:src="@drawable/cart" />
     </LinearLayout>
 
-    <androidx.gridlayout.widget.GridLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerViewShope"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginRight="30dp"
@@ -78,6 +79,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-    </androidx.gridlayout.widget.GridLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
