@@ -16,4 +16,12 @@
     <string name="signin">Sign In</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nama_tanaman">Nama Tanaman</string>
+    <string name="loriem_epsum">Lorem ipsum dolor sit amet consectetur. Pulvinar varius venenatis commodo enim. Vestibulum penatibus mi vitae leo egestas viverra elit vel nulla.</string>
+    <string name="informasi_tanaman">Informasi Tanaman</string>
+    <string name="lokasi_tanaman">Lokasi Tanaman</string>
+    <string name="location">Semarang, Jawa Tengah, Indonesia</string>
+    <string name="tanam">Tanam</string>
+    <string name="timelinebulan">4 - 5 Bulan</string>
+    <string name="durasi_panen">Durasi Panen</string>
 </resources>

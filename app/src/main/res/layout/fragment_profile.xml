@@ -157,7 +157,6 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textAlignment="center"/>
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
