@@ -24,4 +24,5 @@
     <string name="tanam">Tanam</string>
     <string name="timelinebulan">4 - 5 Bulan</string>
     <string name="durasi_panen">Durasi Panen</string>
+    <string name="harga_tanaman">Rp. 5000</string>
 </resources>

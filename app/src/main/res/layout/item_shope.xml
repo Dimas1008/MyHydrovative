@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Rp. 5000"
+            android:text="@string/harga_tanaman"
             android:textColor="@android:color/black"
             android:textSize="12sp" />
     </LinearLayout>
