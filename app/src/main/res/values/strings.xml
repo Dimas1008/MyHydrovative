@@ -24,8 +24,12 @@
     <string name="tanam">Tanam</string>
     <string name="timelinebulan">4 - 5 Bulan</string>
     <string name="durasi_panen">Durasi Panen</string>
-    <string name="harga_tanaman">Rp. 5000</string>
+    <string name="harga_tanaman">5000</string>
     <string name="lorem">Lorem ipsum dolor sit amet consectetur. Egestas neque tellus sed pharetra. Nunc id adipiscing ante duis non netus suspendisse sed. Facilisis eget at sagittis massa in porttitor velit maecenas ullamcorper. Nibh potenti interdum lectus phasellus suscipit cursus viverra. Purus dolor magnis non felis integer in. Lorem cursus mattis amet in praesent facilisi. In in dui facilisi massa integer amet pellentesque. Nec ut placerat turpis sit adipiscing est feugiat enim. Mi lobortis nec sed sit. Tortor quisque iaculis et volutpat nisi.</string>
     <string name="add_to_cart">Add To Cart</string>
     <string name="reviewer">4.5</string>
+    <string name="total_harga">Total Harga</string>
+    <string name="nama_bibit">Nama Bibit</string>
+    <string name="rp">Rp.</string>
+    <string name="tambah_menu_lain">+ Tambah Menu Lain</string>
 </resources>
