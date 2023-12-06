@@ -14,7 +14,7 @@
     <string name="masukan_nama">Masukan Nama</string>
     <string name="password_sama">Masukan Password Yang Sama</string>
     <string name="signin">Sign In</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nama_tanaman">Nama Tanaman</string>
     <string name="loriem_epsum">Lorem ipsum dolor sit amet consectetur. Pulvinar varius venenatis commodo enim. Vestibulum penatibus mi vitae leo egestas viverra elit vel nulla.</string>
@@ -32,4 +32,16 @@
     <string name="nama_bibit">Nama Bibit</string>
     <string name="rp">Rp.</string>
     <string name="tambah_menu_lain">+ Tambah Menu Lain</string>
+    <string name="tanaman_sehat">Tanaman Sehat</string>
+    <string name="timeline">Timeline</string>
+    <string name="jenis_tanaman">Jenis Tanaman</string>
+    <string name="daftar_cart">Daftar Cart</string>
+    <string name="pesan">Pesan</string>
+    <string name="profile_saya">Profile Saya</string>
+    <string name="detail_email">dimassurya@gmail.com</string>
+    <string name="detail_username">Dimas Surya Wirastama</string>
+    <string name="logout">Logout</string>
+    <string name="cari_tanaman">Cari Bahan atau Tanaman..?</string>
+    <string name="tanaman_anda">Tanaman anda</string>
+    <string name="number">1</string>
 </resources>

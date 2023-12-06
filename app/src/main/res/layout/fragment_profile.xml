@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:padding="5dp"
-        android:text="Profile Saya"
+        android:text="@string/profile_saya"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="dimassurya@gmail.com"
+                android:text="@string/detail_email"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dimas Surya Wirastama"
+                android:text="@string/detail_username"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -152,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="Logout"
+                android:text="@string/logout"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"

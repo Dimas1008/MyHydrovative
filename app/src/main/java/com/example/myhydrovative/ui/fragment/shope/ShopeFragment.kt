@@ -12,8 +12,8 @@ import com.example.myhydrovative.ui.adapter.ShopeGridRecyclerViewAdapter
 
 class ShopeFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: ShopeGridRecyclerViewAdapter
+    private lateinit var recyclerView: RecyclerView // Ini untuk recyclerview item_shope
+    private lateinit var adapter: ShopeGridRecyclerViewAdapter // Ini untuk mengambild data dari adapter ShopeGridRecyclerViewAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
