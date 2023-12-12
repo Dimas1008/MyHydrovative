@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,142 +7,131 @@
     android:background="@color/white"
     tools:context=".ui.fragment.home.HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:orientation="horizontal"
+            android:padding="5dp"
+            android:text="@string/hai"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Hai"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_user"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="User"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
-            android:orientation="horizontal"
+            android:text="@string/user"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/button_shapes"
-                android:backgroundTint="@color/brown"
-                app:closeIcon="@drawable/baseline_clear_white_24"
-                app:iconifiedByDefault="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-                app:queryHint="Cari Produk Anda..?"
-                app:searchHintIcon="@null"
-                app:searchIcon="@drawable/baseline_search" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-            <ImageButton
-                android:id="@+id/btn_image_cart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:background="@drawable/button_shapes"
-                android:backgroundTint="@color/brown"
-                android:src="@drawable/cart" />
-        </LinearLayout>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:closeIcon="@drawable/baseline_clear_24"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/cari_jenis_tanaman"
+            app:searchIcon="@drawable/baseline_search_black" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_search">
 
         <ImageView
-            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:src="@drawable/imagehome"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            android:layout_height="150dp"
+            android:background="@drawable/tanam" />
+    </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/tv_timeline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:text="@string/timeline"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    <TextView
+        android:id="@+id/tv_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/timeline"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTimeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeline" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewTimeline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_timeline" />
+    <TextView
+        android:id="@+id/tv_jenisTanaman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/jenis_tanaman"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTimeline" />
 
-        <TextView
-            android:id="@+id/tv_jenisTanaman"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
-            android:text="@string/jenis_tanaman"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerViewTimeline" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recylerViewJenisTanaman"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_jenisTanaman" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerViewJenisTanaman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jenisTanaman" />
+</androidx.constraintlayout.widget.ConstraintLayout>

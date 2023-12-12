@@ -3,18 +3,12 @@ package com.example.myhydrovative.ui.activity.hydrivative
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.myhydrovative.R
 import com.example.myhydrovative.databinding.ActivityHydrovativeBinding
+import com.example.myhydrovative.ui.fragment.camera.CameraFragment
 import com.example.myhydrovative.ui.fragment.home.HomeFragment
 import com.example.myhydrovative.ui.fragment.profile.ProfileFragment
-import com.example.myhydrovative.ui.fragment.shope.ShopeFragment
 import com.example.myhydrovative.ui.fragment.tanaman.TanamanFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HydrovativeActivity : AppCompatActivity() {
 
@@ -32,7 +26,7 @@ class HydrovativeActivity : AppCompatActivity() {
         binding.navViewBottom.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_home -> replaceFragment(HomeFragment())
-                R.id.menu_shope -> replaceFragment(ShopeFragment())
+                R.id.menu_camera -> replaceFragment(CameraFragment())
                 R.id.menu_tanaman -> replaceFragment(TanamanFragment())
                 R.id.menu_profile -> replaceFragment(ProfileFragment())
 

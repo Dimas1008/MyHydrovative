@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.activity.sigin.SiginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,8 +29,8 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:text="@string/signup"
-            android:textColor="@color/black"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +84,7 @@
                         android:background="@drawable/button_shapes"
                         android:ems="10"
                         android:hint="@string/masukan_nama"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
@@ -123,6 +125,7 @@
                         android:background="@drawable/button_shapes"
                         android:ems="10"
                         android:hint="@string/masukan_email"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
@@ -152,7 +155,9 @@
                     android:layout_height="wrap_content"
                     app:cursorColor="@color/black"
                     app:hintEnabled="false"
-                    app:hintTextColor="@color/black">
+                    app:hintTextColor="@color/black"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/brown">
 
                     <EditText
                         android:id="@+id/edtPasswordSig"
@@ -163,6 +168,7 @@
                         android:background="@drawable/button_shapes"
                         android:ems="10"
                         android:hint="@string/masukan_password"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
@@ -173,7 +179,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="40dp"
-                android:text="@string/email"
+                android:text="@string/konfirmasi_password"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -192,7 +198,9 @@
                     android:layout_height="wrap_content"
                     app:cursorColor="@color/black"
                     app:hintEnabled="false"
-                    app:hintTextColor="@color/black">
+                    app:hintTextColor="@color/black"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/brown">
 
                     <EditText
                         android:id="@+id/edtConfirmPasswordSig"
@@ -203,6 +211,7 @@
                         android:background="@drawable/button_shapes"
                         android:ems="10"
                         android:hint="@string/password_sama"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>

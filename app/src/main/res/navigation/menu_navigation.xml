@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_shope"
-        android:name="com.example.myhydrovative.ui.fragment.shope.ShopeFragment"
+        android:name="com.example.myhydrovative.ui.fragment.camera.CameraFragment"
         android:label="Shope"
-        tools:layout="@layout/fragment_shope" />
+        tools:layout="@layout/fragment_camera" />
 
     <fragment
         android:id="@+id/navigation_tanaman"

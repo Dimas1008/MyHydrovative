@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.activity.login.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -84,6 +85,7 @@
                         android:background="@drawable/button_shapes"
                         android:ems="10"
                         android:hint="@string/masukan_email"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
@@ -113,7 +115,9 @@
                     android:layout_height="wrap_content"
                     app:cursorColor="@color/black"
                     app:hintEnabled="false"
-                    app:hintTextColor="@color/black">
+                    app:hintTextColor="@color/black"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/green">
 
                     <EditText
                         android:id="@+id/edtPasswordLog"
@@ -124,6 +128,7 @@
                         android:background="@drawable/button_shapes"
                         android:ems="10"
                         android:hint="@string/masukan_password"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
