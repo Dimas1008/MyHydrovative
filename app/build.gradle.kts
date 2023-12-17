@@ -15,10 +15,13 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField ("String", "API_URL", "\"https://story-api.dicoding.dev/v1/\"")
     }
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 
     buildTypes {
@@ -66,4 +69,23 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui:2.7.0")
 
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
+
+    // Kamera
+    val cameraxVersion = "1.2.3"
+    implementation("androidx.camera:camera-camera2:$cameraxVersion")
+    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
+    implementation("androidx.camera:camera-view:$cameraxVersion")
+
+    // Data Store
+    val ds_version = "1.0.0"
+    implementation ("androidx.datastore:datastore-preferences-core:${ds_version}")
+    implementation ("androidx.datastore:datastore-preferences:${ds_version}")
+    implementation ("androidx.datastore:datastore-preferences-rxjava2:${ds_version}")
+    implementation ("androidx.datastore:datastore-preferences-rxjava3:${ds_version}")
+
+    // Retrofit
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 }

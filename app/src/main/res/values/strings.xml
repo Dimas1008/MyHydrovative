@@ -18,8 +18,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nama_tanaman">Nama Tanaman</string>
     <string name="loriem_epsum">Lorem ipsum dolor sit amet consectetur. Pulvinar varius venenatis commodo enim. Vestibulum penatibus mi vitae leo egestas viverra elit vel nulla.</string>
-    <string name="informasi_tanaman">Informasi Tanaman</string>
-    <string name="lokasi_tanaman">Lokasi Tanaman</string>
+    <string name="informasi_terkait">Informasi Terkait</string>
+    <string name="lokasi_anda">Lokasi Anda</string>
     <string name="location">Semarang, Jawa Tengah, Indonesia</string>
     <string name="tanam">Tanam</string>
     <string name="timelinebulan">4 - 5 Bulan</string>
@@ -42,7 +42,7 @@
     <string name="detail_username">Dimas Surya Wirastama</string>
     <string name="logout">Logout</string>
     <string name="cari_tanaman">Cari Bahan atau Tanaman..?</string>
-    <string name="tanaman_anda">Tanaman anda</string>
+    <string name="tanaman_anda">Tanaman Anda</string>
     <string name="number">1</string>
     <string name="tanaman">Tanaman</string>
     <string name="cari_tanaman_anda">Cari tanaman anda</string>
@@ -53,4 +53,19 @@
     <string name="image">Image</string>
     <string name="deteksi_tanaman">Deteksi Tanaman</string>
     <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="jumlah_penanaman">Jumlah Penanaman</string>
+    <string name="jml_penanam">21</string>
+    <string name="sisa_waktu_panen">Sisa Waktu Panen</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="bahasa_asal">Indonesia</string>
+    <string name="siap_panen">Siap panen</string>
+
+    // Login Activity
+    <string name="halaman_masuk">Halaman Login</string>
+    <string name="kolom_nama">Isi nama dulu!</string>
+    <string name="kolom_email">Isi email dulu!</string>
+    <string name="kolom_password">Isi password dulu!</string>
+    <string name="halaman_registrasi">Halaman Registrasi</string>
+    <string name="password_kurangtepat">Kata sandi anda tidak cocok</string>
+    <string name="password_length_error">Kata sandi harus setidaknya 8 karakter</string>
 </resources>
