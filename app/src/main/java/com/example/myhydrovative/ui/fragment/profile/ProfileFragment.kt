@@ -10,6 +10,7 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.commit
 import com.example.myhydrovative.R
 import com.example.myhydrovative.ui.activity.main.MainActivity
+import com.example.myhydrovative.ui.activity.welcome.WelcomeActivity
 
 class ProfileFragment : Fragment(), View.OnClickListener {
 
@@ -31,7 +32,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {
         if (v.id == R.id.cardViewLogout) {
-            val intent = Intent(requireContext(), MainActivity::class.java)
+            val intent = Intent(requireContext(), WelcomeActivity::class.java)
             startActivity(intent)
 
             // Akhiri activity saat ini (ProfileFragment)

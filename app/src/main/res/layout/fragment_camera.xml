@@ -39,9 +39,11 @@
         <ImageView
             android:id="@+id/iv_deteksiTanaman"
             android:layout_width="match_parent"
-            android:layout_height="290dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/buah"
+            android:layout_height="330dp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/baseline_image_grey_42"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
