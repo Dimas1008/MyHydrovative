@@ -20,6 +20,7 @@ class SiginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sigin)
+        getSupportActionBar()?.hide()
 
         binding = ActivitySiginBinding.inflate(layoutInflater)
         setContentView(binding.root)

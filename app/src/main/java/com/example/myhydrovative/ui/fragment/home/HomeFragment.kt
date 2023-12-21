@@ -1,19 +1,20 @@
 package com.example.myhydrovative.ui.fragment.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myhydrovative.R
 import com.example.myhydrovative.data.firebase.NandurAdapter
 import com.example.myhydrovative.data.firebase.NandurData
 import com.example.myhydrovative.databinding.FragmentHomeBinding
-import com.example.myhydrovative.ui.adapter.HomeRecyclerViewAdapter
+import com.example.myhydrovative.ui.activity.search.SearchActivity
 import com.example.myhydrovative.ui.adapter.TanamRecyclerViewAdapter
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -49,9 +50,34 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
         binding.recylerViewJenisTanaman.adapter = mAdapter
 
+        // berpindah ke search Activity
+        binding.viewSearch.setOnClickListener {
+            val intent = Intent(requireContext(), SearchActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Initialize SearchView
+        binding.searchHome.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                startSearchActivity()
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                mAdapter.filter(newText)
+                return false
+            }
+        })
+
         getNandurData()
 
         return binding.root
+    }
+
+    private fun startSearchActivity() {
+        val intent = Intent(requireContext(), SearchActivity::class.java)
+        startActivity(intent)
     }
 
     private fun getNandurData() {
@@ -64,6 +90,7 @@ class HomeFragment : Fragment() {
                         nandurList.add(nandur!!)
                     }
                     binding.recylerViewJenisTanaman.adapter = mAdapter
+                    mAdapter.setData(nandurList)
                 }
             }
 
@@ -79,5 +106,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.searchHome.clearFocus()
     }
 }

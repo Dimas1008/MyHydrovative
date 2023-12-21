@@ -1,4 +1,4 @@
-package com.example.myhydrovative.data.firebase
+package com.example.myhydrovative.ui.activity.search
 
 import android.content.Context
 import android.content.Intent
@@ -7,20 +7,21 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myhydrovative.R
-import com.example.myhydrovative.databinding.ItemJenistanamanBinding
+import com.example.myhydrovative.data.firebase.NandurData
+import com.example.myhydrovative.databinding.ItemSearchBinding
 import com.example.myhydrovative.ui.activity.detail.DetailHomeActivity
 
-class NandurAdapter (
+class SearchAdapter (
     var c: Context, var nandurList:ArrayList<NandurData>
-): RecyclerView.Adapter<NandurAdapter.NandurViewHolder>(){
-    inner class NandurViewHolder(var v:ItemJenistanamanBinding): RecyclerView.ViewHolder(v.root){}
+): RecyclerView.Adapter<SearchAdapter.NandurViewHolder>(){
+    inner class NandurViewHolder(var v: ItemSearchBinding): RecyclerView.ViewHolder(v.root){}
 
     private var originalList: ArrayList<NandurData> = ArrayList(nandurList)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NandurViewHolder {
         val inflter = LayoutInflater.from(parent.context)
-        val v = DataBindingUtil.inflate<ItemJenistanamanBinding>(
-            inflter, R.layout.item_jenistanaman,parent,
+        val v = DataBindingUtil.inflate<ItemSearchBinding>(
+            inflter, R.layout.item_search,parent,
             false
         )
         return NandurViewHolder(v)
@@ -67,4 +68,5 @@ class NandurAdapter (
         nandurList.addAll(filteredList)
         notifyDataSetChanged()
     }
+
 }

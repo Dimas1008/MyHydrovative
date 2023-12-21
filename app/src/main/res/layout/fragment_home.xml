@@ -72,6 +72,11 @@
                     app:queryHint="@string/cari_jenis_tanaman"
                     app:searchHintIcon="@null"
                     app:searchIcon="@drawable/baseline_search_black" />
+
+                <View
+                    android:id="@+id/viewSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView

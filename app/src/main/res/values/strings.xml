@@ -60,6 +60,7 @@
     <string name="bahasa_asal">Indonesia</string>
     <string name="siap_panen">Siap panen</string>
     <string name="camera">Camera</string>
+    <string name="image_description">Deskripsi Gambar Anda</string>
 
     // Login Activity
     <string name="halaman_masuk">Halaman Login</string>

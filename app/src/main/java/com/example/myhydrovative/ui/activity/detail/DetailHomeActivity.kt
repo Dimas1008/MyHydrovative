@@ -13,20 +13,22 @@ class DetailHomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getSupportActionBar()?.hide()
         setContentView(R.layout.activity_detail_home)
+        getSupportActionBar()?.hide()
 
         binding = ActivityDetailHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         /**get Data*/
-        val animalIntent = intent
-        val animalName = animalIntent.getStringExtra("name")
-        val animaldescription = animalIntent.getStringExtra("description")
-        val animalImage = animalIntent.getStringExtra("image")
+        val tanamanIntent = intent
+        val tanamanName = tanamanIntent.getStringExtra("name")
+        val tanamanDescription = tanamanIntent.getStringExtra("description")
+        val tanamanImage = tanamanIntent.getStringExtra("image")
 
-        binding.tvTanaman.text = animalName
-        binding.tvDescription.text = animaldescription
-        binding.imageTanaman.loadImage(animalImage, getProgessDrawable(this))
+        binding.tvTanaman.text = tanamanName
+        binding.tvDescription.text = tanamanDescription
+        binding.imageTanaman.loadImage(tanamanImage, getProgessDrawable(this))
 
         binding.iconBackTanaman.setOnClickListener {
             onBackPressed()
