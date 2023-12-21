@@ -59,6 +59,7 @@
     <string name="bahasa">Bahasa</string>
     <string name="bahasa_asal">Indonesia</string>
     <string name="siap_panen">Siap panen</string>
+    <string name="camera">Camera</string>
 
     // Login Activity
     <string name="halaman_masuk">Halaman Login</string>
@@ -68,4 +69,5 @@
     <string name="halaman_registrasi">Halaman Registrasi</string>
     <string name="password_kurangtepat">Kata sandi anda tidak cocok</string>
     <string name="password_length_error">Kata sandi harus setidaknya 8 karakter</string>
+    <string name="search">Search</string>
 </resources>

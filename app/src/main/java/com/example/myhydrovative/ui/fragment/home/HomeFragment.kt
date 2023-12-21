@@ -1,52 +1,83 @@
 package com.example.myhydrovative.ui.fragment.home
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myhydrovative.R
+import com.example.myhydrovative.data.firebase.NandurAdapter
+import com.example.myhydrovative.data.firebase.NandurData
+import com.example.myhydrovative.databinding.FragmentHomeBinding
 import com.example.myhydrovative.ui.adapter.HomeRecyclerViewAdapter
 import com.example.myhydrovative.ui.adapter.TanamRecyclerViewAdapter
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
-class HomeFragment : Fragment(){
+class HomeFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView // Ini untuk recyclerview item_jenisTanaman
-    private lateinit var adapter: HomeRecyclerViewAdapter // Ini untuk mengambild data dari adapter HomeRecyclerViewAdapter
-    private lateinit var adapterRecyclerViewAdapter: TanamRecyclerViewAdapter // Ini untuk mengambild data dari adapter TanamRecyclerViewAdapter
+    private lateinit var binding: FragmentHomeBinding
+    lateinit var FirebaseDataBase: DatabaseReference
+    private lateinit var nandurList: ArrayList<NandurData>
+    private lateinit var mAdapter: NandurAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         // Recycler view untuk list Timeline
-        recyclerView = view.findViewById(R.id.recyclerViewTimeline)
-        adapterRecyclerViewAdapter = TanamRecyclerViewAdapter()
+        val adapterRecyclerViewAdapter = TanamRecyclerViewAdapter()
+        binding.recyclerViewTimeline.setHasFixedSize(true)
+        binding.recyclerViewTimeline.layoutManager =
+            LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
+        binding.recyclerViewTimeline.adapter = adapterRecyclerViewAdapter
 
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-        recyclerView.adapter = adapterRecyclerViewAdapter
+        // Recycler tanaman dari firebase
+        nandurList = ArrayList()
+        mAdapter = NandurAdapter(requireContext(), nandurList)
+        binding.recylerViewJenisTanaman.setHasFixedSize(true)
+        binding.recylerViewJenisTanaman.layoutManager =
+            LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
+        binding.recylerViewJenisTanaman.adapter = mAdapter
 
-        // Recycler view untuk list Jenis Tanaman
-        recyclerView = view.findViewById(R.id.recylerViewJenisTanaman)
-        adapter = HomeRecyclerViewAdapter()
+        getNandurData()
 
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-        recyclerView.adapter = adapter
+        return binding.root
+    }
 
-        return view
+    private fun getNandurData() {
+        FirebaseDataBase = FirebaseDatabase.getInstance().getReference("Nandur")
+        FirebaseDataBase.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (nandurSnapshot in snapshot.children) {
+                        val nandur = nandurSnapshot.getValue(NandurData::class.java)
+                        nandurList.add(nandur!!)
+                    }
+                    binding.recylerViewJenisTanaman.adapter = mAdapter
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(
+                    requireContext(),
+                    error.message,
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     }
 }

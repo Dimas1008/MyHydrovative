@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011505386659",
+    "project_id": "woven-edge-401518",
+    "storage_bucket": "woven-edge-401518.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011505386659:android:1d955e4d1814ddfebf9b16",
+        "android_client_info": {
+          "package_name": "com.example.myhydrovative"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW9YNWucVLFuD8pKRGuNaXvAKXjkvbwyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

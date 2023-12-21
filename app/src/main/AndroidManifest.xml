@@ -30,9 +30,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHydrovative"
         tools:targetApi="31">
-        <activity
-            android:name=".ui.activity.camera.CameraActivity"
-            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="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" />
+
         <activity
             android:name=".ui.activity.welcome.WelcomeActivity"
             android:exported="false" />
