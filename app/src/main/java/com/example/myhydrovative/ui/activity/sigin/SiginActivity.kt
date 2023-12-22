@@ -29,6 +29,12 @@ class SiginActivity : AppCompatActivity() {
         setupViewMOdel()
         setupAction()
 
+        // Simpan nama pengguna ke SharedPreferences
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.remove("username")
+        editor.apply()
+
         binding.tvLoginSig.setOnClickListener {
             val moveIntent = Intent(this, LoginActivity::class.java)
             startActivity(moveIntent)
@@ -127,6 +133,7 @@ class SiginActivity : AppCompatActivity() {
     private fun moveActivity() {
         siginViewModel.registerResponse.observe(this@SiginActivity) { response ->
             if (!response.error) {
+                // Pindah ke LoginActivity
                 startActivity(Intent(this@SiginActivity, LoginActivity::class.java))
                 finish()
             }
